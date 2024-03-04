@@ -46,3 +46,13 @@ exports.find=(req,res)=>{
     })
 
 }
+
+//修改表里nickname数据
+exports.update=(req,res)=>{
+    const sql='update ev_riders set ? where username=?'
+    db.query(sql,[req.body,req.body.username],(err,results)=>{
+        if(err) {return res.cc(err)}
+        // if(results.affectedRows!== 1) {return res.cc('获取用户数据失败！')}
+        res.cc('更新用户信息成功',0)
+    })
+}

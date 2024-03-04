@@ -16,7 +16,7 @@ exports.add=(req,res)=>{
         //往数据库中添加新用户
     const sql='insert into ev_comment set ?'
     db.query(sql,{newsid:userinfo.newsid,avatar:userinfo.avatar,
-        username:userinfo.username,text:userinfo.text},(err,results)=>{
+        username:userinfo.username,text:userinfo.text,nickname:userinfo.nickname},(err,results)=>{
         if(err){
             // return res.send({status:1,message:err.message})
             return res.cc(err)

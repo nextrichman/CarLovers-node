@@ -9,4 +9,7 @@ router.post('/add',riders_handler.add)
 //获取用户基本信息的路由
 router.get('/find',riders_handler.find)
 
+//修改表里nickname数据
+router.put('/update',riders_handler.update)
+
 module.exports=router
